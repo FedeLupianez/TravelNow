@@ -8,7 +8,7 @@ router = APIRouter(prefix="/dest")
 @router.get("/get_all")
 def get_all():
     try:
-        with open(get_path("cards.json"), "r") as file:
+        with open(get_path("cards.json"), "r", encoding="utf-8") as file:
             response = {"cards": json.load(file)}
             return response
     except Exception:

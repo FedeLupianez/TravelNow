@@ -1,17 +1,17 @@
 class Card extends HTMLElement {
-   constructor() {
-      super();
-   }
+  constructor() {
+    super();
+  }
 
-   connectedCallback() {
-      this.title = this.getAttribute("title") || "";
-      this.country = this.getAttribute("country") || "";
-      this.rank = this.getAttribute("rank") || "";
-      this.price = this.getAttribute("price") || "";
-      this.image = this.getAttribute("image") || "";
+  connectedCallback() {
+    this.title = this.getAttribute("title") || "";
+    this.country = this.getAttribute("country") || "";
+    this.rank = this.getAttribute("rank") || "";
+    this.price = this.getAttribute("price") || "";
+    this.image = this.getAttribute("image") || "";
 
-      console.log("creating card ...")
-      this.innerHTML = `
+    console.log("creating card ...")
+    this.innerHTML = `
       <div class="card">
          <a href="index.html" class="image-container">
             <img src="${this.image}" />
@@ -32,6 +32,6 @@ class Card extends HTMLElement {
          </div>
       </div>
       `
-   }
+  }
 }
 customElements.define("card-item", Card);
