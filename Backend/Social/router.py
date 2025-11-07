@@ -1,12 +1,11 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 import yagmail
+from dependencies import YAGMAIL_PWD
 
 
 router = APIRouter(prefix="/social")
-yag = yagmail.SMTP(
-    user="lupianez.federico2023@gmail.com", password="oabv sjxg tmwe uyja"
-)
+yag = yagmail.SMTP(user="lupianez.federico2023@gmail.com", password=YAGMAIL_PWD)
 
 
 class contact_data(BaseModel):
