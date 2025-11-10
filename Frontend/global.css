@@ -2,6 +2,7 @@
 @import url('styles/header.css');
 @import url('styles/like_button.css');
 @import url('styles/footer.css');
+@import url('styles/spot_modal.css');
 
 html,
 body {

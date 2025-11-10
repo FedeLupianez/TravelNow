@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
+   <meta charset="UTF-8">
    <title>TravelNow</title>
    <link rel="icon" type="image/x-icon" href="img/logo.png" />
    <link rel="stylesheet" href="global.css">
@@ -18,7 +18,7 @@
 
 <body>
    <header-nav></header-nav>
-   <img src="img/background.jpg" id="landing-image"></img>
+   <img src="img/background.jpg" id="landing-image" />
 
    <main>
       <span class="title">
@@ -27,6 +27,18 @@
 
       <section class="cards-container">
       </section>
+
+      <section class="spot-container">
+         <button id="open-modal">Ver Video</button>
+         <div class="modal" id="modal">
+            <div class="modal-content">
+               <button class="close" id="close-modal">&times;</button>
+               <iframe width="560" id="video" height="315" src="" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+         </div>
+      </section>
    </main>
    <footer-component></footer-component>
 
@@ -34,6 +46,7 @@
    <script src="components/card.js"></script>
    <script src="components/header.js"></script>
    <script src="components/footer.js"></script>
+   <script src="components/spot_modal.js"></script>
    <script src="app.js"></script>
 </body>
 
