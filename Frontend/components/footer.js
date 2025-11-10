@@ -28,7 +28,7 @@ class Footer extends HTMLElement {
             </div>
             <div id="footer-logo"
                style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-               <img src="/img/logo.png" id="logo" alt="logo" style="border-radius: 100%; width: 10rem; height: auto;"></img>
+               <img src="/Frontend/img/logo.png" id="logo" alt="logo" style="border-radius: 100%; width: 10rem; height: auto;"></img>
                <span>TravelNow</span>
             </div>
          </footer>
