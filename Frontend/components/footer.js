@@ -1,10 +1,10 @@
 class Footer extends HTMLElement {
-  constructor() {
-    super();
-  }
+   constructor() {
+      super();
+   }
 
-  connectedCallback() {
-    this.innerHTML = `
+   connectedCallback() {
+      this.innerHTML = `
          <footer>
             <div id="footer-social">
                <div class="social">
@@ -28,12 +28,12 @@ class Footer extends HTMLElement {
             </div>
             <div id="footer-logo"
                style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-               <img src="img/logo.png" id="logo" alt="logo" style="border-radius: 100%; width: 10rem; height: auto;"></img>
+               <img src="/img/logo.png" id="logo" alt="logo" style="border-radius: 100%; width: 10rem; height: auto;"></img>
                <span>TravelNow</span>
             </div>
          </footer>
       `
-  }
+   }
 }
 
 customElements.define("footer-component", Footer);

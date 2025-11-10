@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+   <meta charset="UTF-8">
    <title>TravelNow Contact</title>
    <link rel="icon" type="image/x-icon" href="../img/logo.png" />
    <link rel="stylesheet" href="global.css">
@@ -20,7 +21,7 @@
       <div class="contact-information">
          <aside class="info">
             <header class="header">
-               <h1>Contact Us</h1>
+               <h1>Contactanos</h1>
                <span class="description">
                   We’re here to help and answer any questions you
                   might have. We look forward to hearing from you!
@@ -52,23 +53,30 @@
       </div>
 
       <div class="form-container">
-         <h1>Send a message</h1>
+         <h1>Envía un mensaje</h1>
          <form id="form">
             <div id="names">
-               <input type="text" placeholder="Name" id="form_name" required>
-               <input type="text" placeholder="Lastname" id="form_lastname" required>
+               <input type="text" placeholder="Nombre" id="form_name" required>
+               <input type="text" placeholder="Apellido" id="form_lastname" required>
             </div>
             <input type="email" placeholder="example@gmail.com" id="form_email" required>
-            <input type="tel" placeholder="Phone Number" id="form_number">
-            <input type="text" placeholder="Subject" id="form_subject">
-            <textarea name="message" cols="50" rows="10" placeholder="Message" id="form_message"></textarea>
-            <button>Send</button>
+            <input type="tel" placeholder="Número de teléfono" id="form_number">
+            <select name="destination" id="form_destination" required>
+               <option value="" disabled selected hidden>Destino Favorito</option>
+               <option value="arg">Argentina</option>
+               <option value="esp">España</option>
+               <option value="nld">Países Bajos</option>
+               <option value="fra">Francia</option>
+            </select>
+            <input type="text" placeholder="Sujeto" id="form_subject">
+            <textarea name="message" cols="50" rows="10" placeholder="Mensaje" id="form_message"></textarea>
+            <button>Enviar</button>
          </form>
       </div>
    </main>
    <footer-component></footer-component>
-   <script src="/components/header.js"></script>
-   <script src="/components/footer.js"></script>
+   <script src="../components/header.js" charset="UTF-8"></script>
+   <script src="../components/footer.js" charset="UTF-8"></script>
    <script src="send_data.js"></script>
    <script src="/app.js"></script>
 </body>

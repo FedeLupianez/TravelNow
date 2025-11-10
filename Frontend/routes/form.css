@@ -64,3 +64,26 @@
    padding: 0.5rem;
    border-radius: 14px;
 }
+
+.form-container form select {
+   border: none;
+   background-color: white;
+   border-bottom: solid 1px gray;
+   width: 100%;
+}
+
+.form-container form select:focus {
+   border: none;
+   border-bottom: solid 1px black;
+   outline: none;
+}
+
+.form-container form textarea {
+   border: none;
+   border-radius: 14px;
+   resize: none;
+   overflow: auto;
+   padding: 1rem;
+   border: solid 1px gray;
+   text-align: start;
+}
