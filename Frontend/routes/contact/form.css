@@ -4,6 +4,7 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   position: relative;
 }
 
 .form-container form {
@@ -39,6 +40,29 @@
    width: 50%;
 }
 
+
+.form-container select {
+   width: 100%;
+   background-color: white;
+   border: none;
+   border-bottom: solid 1px gray;
+   overflow: hidden;
+   height: 2rem;
+}
+
+.form-container select:focus {
+   border: none;
+   border-bottom: solid 1px black;
+   outline: none;
+   overflow: hidden;
+}
+
+.form-container select option {
+   padding: 0.5rem;
+   color: gray;
+   border: none;
+}
+
 #message {
    height: 10rem;
    background-color: whitesmoke;
@@ -63,6 +87,10 @@
    cursor: pointer;
    padding: 0.5rem;
    border-radius: 14px;
+}
+
+.form-container form button:hover {
+   background-color: navajowhite;
 }
 
 .form-container form select {

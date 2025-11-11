@@ -23,6 +23,8 @@ nav {
    justify-content: center;
    width: 15%;
    height: auto;
+   animation: entry_top 1s;
+   transition: all 0.3s ease;
 }
 
 #logo img {
@@ -61,8 +63,8 @@ nav {
 }
 
 #mute_volume {
-   width: 1rem;
-   height: 1rem;
+   width: 2rem;
+   height: 2rem;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -71,7 +73,11 @@ nav {
    font-size: 1.5rem;
    border: none;
    background-color: transparent;
+   border-radius: 100%;
+}
 
+#mute_volume:hover {
+   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .logo-hidden {

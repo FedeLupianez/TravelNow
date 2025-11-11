@@ -42,11 +42,13 @@
 }
 
 #open-modal {
+   font-family: "Lexend Exa", monospace;
    border: none;
    color: black;
    background-color: transparent;
    cursor: pointer;
    border-radius: 14px;
+   padding: 2rem;
 
    &:hover {
       background-color: antiquewhite;

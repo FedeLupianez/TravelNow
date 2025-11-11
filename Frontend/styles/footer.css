@@ -2,7 +2,7 @@ footer {
    display: flex;
    background-color: antiquewhite;
    flex-direction: row;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
    padding: 1rem;
    gap: 1rem;
@@ -32,4 +32,8 @@ footer {
    align-items: start;
    justify-content: center;
    gap: 1rem;
+}
+
+#footer-logo {
+   padding: 1rem;
 }
