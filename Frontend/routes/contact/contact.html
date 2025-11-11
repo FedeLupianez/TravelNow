@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <title>TravelNow Contact</title>
-   <link rel="icon" type="image/x-icon" href="../img/logo.png" />
+   <link rel="icon" type="image/x-icon" href="/Frontend/img/logo.png" />
    <link rel="stylesheet" href="contact.css">
 
    <link
@@ -19,7 +19,7 @@
    <audio id="audio" autoplay>
       <source src="/Frontend/assets/background_music.mp3" type="audio/mpeg">
    </audio>
-   <main>
+   <main style="font-family: 'Lexend Exa', monospace;">
       <div class="contact-information">
          <aside class="info">
             <header class="header">
@@ -65,10 +65,6 @@
             <input type="tel" placeholder="Número de teléfono" id="form_number">
             <select name="destination" id="form_destination" required>
                <option value="" disabled selected hidden>Destino Favorito</option>
-               <option value="arg">Argentina</option>
-               <option value="esp">España</option>
-               <option value="nld">Países Bajos</option>
-               <option value="fra">Francia</option>
             </select>
             <input type="text" placeholder="Sujeto" id="form_subject">
             <textarea name="message" cols="50" rows="10" placeholder="Mensaje" id="form_message"></textarea>
@@ -82,6 +78,7 @@
    <script src="send_data.js"></script>
    <script src="/Frontend/scripts/music_control.js"></script>
    <script src="/Frontend/scripts/header.js"></script>
+   <script src="countries.js"></script>
    <script src="/Frontend/app.js"></script>
 </body>
 

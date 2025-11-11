@@ -30,11 +30,11 @@ async function load_cards_data() {
    try {
       console.log("cargando datos");
 
-      // const response = await fetch("./cards.json");
-      // const data = await response.json();
-
-      const response = await fetch("http://localhost:8000/dest/get_all");
+      const response = await fetch("/Frontend/cards.json");
       const data = await response.json();
+
+      // const response = await fetch("http://localhost:8000/dest/get_all");
+      // const data = await response.json();
       const cards_container = document.querySelector(".cards-container");
       for (let i = 0; i < data.length; i++) {
          const card = document.createElement("card-item");
