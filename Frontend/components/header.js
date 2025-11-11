@@ -28,7 +28,7 @@ class Header extends HTMLElement {
                      keyboard_arrow_down
                   </span>
                </a>
-               <a href="/Frontend/routes/contact.html" target="_self" class="link_span">Contacto
+               <a href="/Frontend/routes/contact/contact.html" target="_self" class="link_span">Contacto
                   <span class="material-symbols-outlined">
                      keyboard_arrow_down
                   </span>
