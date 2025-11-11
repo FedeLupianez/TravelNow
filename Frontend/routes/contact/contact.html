@@ -16,7 +16,7 @@
 
 <body>
    <header-nav></header-nav>
-   <audio id="audio" autoplay>
+   <audio id="audio" autoplay loop>
       <source src="/Frontend/assets/background_music.mp3" type="audio/mpeg">
    </audio>
    <main style="font-family: 'Lexend Exa', monospace;">
@@ -70,6 +70,9 @@
             <textarea name="message" cols="50" rows="10" placeholder="Mensaje" id="form_message"></textarea>
             <button>Enviar</button>
          </form>
+         <span id="log" class="material-symbols-outlined" style="display: none;">
+            done
+         </span>
       </div>
    </main>
    <footer-component></footer-component>

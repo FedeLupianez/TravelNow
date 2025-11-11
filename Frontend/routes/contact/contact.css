@@ -1,6 +1,7 @@
 @import url("form.css");
 @import url("/Frontend/styles/header.css");
 @import url("/Frontend/styles/footer.css");
+@import url("/Frontend/styles/global.css");
 
 
 body {
@@ -80,4 +81,27 @@ main {
    display: inline-block;
    white-space: normal;
    word-wrap: break-word;
+}
+
+
+#log {
+   padding: 1rem;
+   margin: 0.5rem;
+   align-items: center;
+   justify-content: center;
+   font-size: 5rem;
+}
+
+.error {
+   color: red;
+   animation: entry_top 1s;
+   transition: all 0.3s ease;
+   background-color: transparent;
+}
+
+.success {
+   color: green;
+   animation: entry_top 1s;
+   transition: all 0.3s ease;
+   background-color: transparent;
 }

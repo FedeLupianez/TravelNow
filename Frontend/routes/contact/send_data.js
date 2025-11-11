@@ -1,4 +1,5 @@
 const form = document.getElementById("form");
+const log = document.getElementById("log");
 
 form.addEventListener("submit", async (e) => {
    e.preventDefault()
@@ -11,17 +12,24 @@ form.addEventListener("submit", async (e) => {
       message: document.getElementById("form_message").value
    }
 
-   const response = await fetch("http://localhost:8000/social/contact", {
-      method: 'POST',
-      headers: {
-         'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-   })
-   const result = await response.json();
-   if (result.ok) {
+   try {
+      const response = await fetch("http://localhost:8080/social/contact", {
+         method: 'POST',
+         headers: {
+            'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(data)
+      })
+      const result = await response.json();
       console.log("message sent");
-   } else {
-      console.warn("message not sent")
+      log.classList.remove("error");
+      log.classList.add("success");
+      log.innerHTML = "done";
+   } catch (error) {
+      console.warn("message not sent");
+      log.classList.remove("success");
+      log.classList.add("error");
+      log.innerHTML = "error";
    }
+   log.style.display = "flex";
 })
