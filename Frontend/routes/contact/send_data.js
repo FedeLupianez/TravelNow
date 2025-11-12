@@ -9,7 +9,8 @@ form.addEventListener("submit", async (e) => {
       email: document.getElementById("form_email").value,
       number: document.getElementById("form_number").value,
       subject: document.getElementById("form_subject").value,
-      message: document.getElementById("form_message").value
+      message: document.getElementById("form_message").value,
+      destination: document.getElementById("form_destination").value
    }
 
    try {
@@ -20,7 +21,6 @@ form.addEventListener("submit", async (e) => {
          },
          body: JSON.stringify(data)
       })
-      const result = await response.json();
       console.log("message sent");
       log.classList.remove("error");
       log.classList.add("success");

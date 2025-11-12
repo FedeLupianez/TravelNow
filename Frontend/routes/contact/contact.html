@@ -53,27 +53,37 @@
          </aside>
          <img src="https://sleeknote.com/wp-content/uploads/2023/11/image-4-1024x1024.png.webp" id="contact-image">
       </div>
+      <section id="contact-us">
+         <img src="https://sleeknote.com/wp-content/uploads/2021/08/fp2020-producttype-guide.svg" alt="hello">
+         <div class="form-container">
+            <h1>Envía un mensaje</h1>
+            <form id="form">
+               <div id="names">
+                  <input type="text" placeholder="Nombre" id="form_name" required>
+                  <input type="text" placeholder="Apellido" id="form_lastname" required>
+               </div>
+               <input type="email" placeholder="example@gmail.com" id="form_email" required>
+               <input type="tel" placeholder="Número de teléfono" id="form_number">
+               <select name="destination" id="form_destination" required>
+                  <option value="" disabled selected hidden>Destino Favorito</option>
+               </select>
+               <input type="text" placeholder="Sujeto" id="form_subject">
+               <textarea name="message" cols="50" rows="10" placeholder="Mensaje" id="form_message"></textarea>
+               <button>Enviar</button>
+            </form>
+            <span id="log" class="material-symbols-outlined" style="display: none;">
+               done
+            </span>
+         </div>
 
-      <div class="form-container">
-         <h1>Envía un mensaje</h1>
-         <form id="form">
-            <div id="names">
-               <input type="text" placeholder="Nombre" id="form_name" required>
-               <input type="text" placeholder="Apellido" id="form_lastname" required>
-            </div>
-            <input type="email" placeholder="example@gmail.com" id="form_email" required>
-            <input type="tel" placeholder="Número de teléfono" id="form_number">
-            <select name="destination" id="form_destination" required>
-               <option value="" disabled selected hidden>Destino Favorito</option>
-            </select>
-            <input type="text" placeholder="Sujeto" id="form_subject">
-            <textarea name="message" cols="50" rows="10" placeholder="Mensaje" id="form_message"></textarea>
-            <button>Enviar</button>
-         </form>
-         <span id="log" class="material-symbols-outlined" style="display: none;">
-            done
-         </span>
-      </div>
+      </section>
+
+
+      <section id="created-contacts">
+         <button id="show-contacts">Ver contactos</button>
+         <div id="contacts-container" class="hidden">
+         </div>
+      </section>
    </main>
    <footer-component></footer-component>
    <script src="/Frontend/components/header.js" charset="UTF-8"></script>
@@ -82,6 +92,7 @@
    <script src="/Frontend/scripts/music_control.js"></script>
    <script src="/Frontend/scripts/header.js"></script>
    <script src="countries.js"></script>
+   <script src="load_contacts.js"></script>
    <script src="/Frontend/app.js"></script>
 </body>
 

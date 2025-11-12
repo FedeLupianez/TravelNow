@@ -64,7 +64,7 @@
          // const response = await fetch("./cards.json");
          // const data = await response.json();
 
-         const response = await fetch("http://localhost:8000/dest/get_all");
+         const response = await fetch("http://localhost:8080/dest/get_all");
          const data = await response.json();
          const cards_container = document.querySelector(".cards-container");
          for (let i = 0; i < data.cards.length; i++) {

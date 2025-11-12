@@ -24,6 +24,8 @@ async def contact_us(message: services.contact_data):
     return {"detail": "message sent"}
 
 
-@router.get("/get_all")
+@router.get("/get_contacts")
 async def get_all():
-    pass
+    contacts = services.get_contacts()
+    contacts = list(contacts.values())
+    return contacts

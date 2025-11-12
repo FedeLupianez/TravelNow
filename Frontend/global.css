@@ -29,6 +29,9 @@ a {
    text-decoration: none;
 }
 
+.hidden {
+   display: none;
+}
 
 @keyframes entry_top {
    0% {

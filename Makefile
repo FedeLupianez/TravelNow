@@ -1,7 +1,7 @@
 BACKEND_DIR=./Backend
 FRONTEND_DIR=./Frontend
 VENV_DIR=.venv
-UVICORN=$(VENV_DIR)/bin/uvicorn
+UVICORN=./$(VENV_DIR)/bin/uvicorn
 APP_MODULE=main:app
 HOST=http://localhost:8000
 OS=$(shell uname)

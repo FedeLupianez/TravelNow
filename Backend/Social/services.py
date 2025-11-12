@@ -18,3 +18,7 @@ def save_contact(contact: contact_data):
     except Exception as error:
         print("error al guardar el contacto : ", error)
         return False
+
+
+def get_contacts():
+    return DB.get_all_data("contacts")

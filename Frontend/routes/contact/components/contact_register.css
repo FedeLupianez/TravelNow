@@ -1,0 +1,8 @@
+.contact-item {
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
