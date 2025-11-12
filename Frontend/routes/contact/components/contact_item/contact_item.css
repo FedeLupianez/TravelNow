@@ -1,0 +1,45 @@
+@import url("/Frontend/global.css");
+
+.contact-item {
+   display: flex;
+   width: 100%;
+   height: auto;
+   flex-direction: row;
+   align-items: stretch;
+   justify-content: space-between;
+   gap: 0.5rem;
+   border-bottom: 1px solid #d9d9d9;
+   padding: 1rem;
+   cursor: pointer;
+   animation: fade-in 0.5s ease-in-out;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.contact-item .contact-left-info {
+   display: flex;
+   flex: 1;
+   flex-direction: column;
+   align-items: start;
+   justify-content: center;
+   gap: 0.5rem;
+}
+
+.contact-item .contact-message {
+   border: solid 1px gray;
+   flex: 1;
+   border-radius: 14px;
+   width: 100%;
+   padding: 1rem;
+}
+
+@keyframes fade-in {
+   from {
+      display: none;
+      opacity: 0;
+   }
+
+   to {
+      display: flex;
+      opacity: 1;
+   }
+}
