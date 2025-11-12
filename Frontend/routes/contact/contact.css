@@ -1,7 +1,7 @@
 @import url("./styles/form.css");
-@import url("/Frontend/styles/header.css");
-@import url("/Frontend/styles/footer.css");
-@import url("/Frontend/styles/global.css");
+@import url("/Frontend/components/Header/header.css");
+@import url("/Frontend/components/Footer/footer.css");
+@import url("/Frontend/components/Like_Button/like_button.css");
 @import url("/Frontend/routes/contact/components/contact_item/contact_item.css");
 @import url("./styles/view_contacts.css");
 

@@ -1,8 +1,9 @@
 @import url('/Frontend/styles/cards.css');
-@import url('/Frontend/styles/header.css');
-@import url('/Frontend/styles/like_button.css');
-@import url('/Frontend/styles/footer.css');
-@import url('/Frontend/styles/spot_modal.css');
+@import url('/Frontend/components/Card/card.css');
+@import url('/Frontend/components/Header/header.css');
+@import url('/Frontend/components/Footer/footer.css');
+@import url('/Frontend/components/Spot_Modal/spot_modal.css');
+@import url('/Frontend/components/Like_Button/like_button.css');
 @import url("/Frontend/global.css");
 
 

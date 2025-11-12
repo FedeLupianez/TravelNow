@@ -4,34 +4,34 @@
     "country": "Países Bajos",
     "rank": "9.5",
     "price": "$1.000.000",
-    "image": "img/amsterdam.webp"
+    "image": "amsterdam.webp"
   },
   {
     "title": "Budapest",
     "country": "Hungría",
     "rank": "9.3",
     "price": "$220.000",
-    "image": "img/Budapest.jpg"
+    "image": "Budapest.jpg"
   },
   {
     "title": "Gran Canaria",
     "country": "España",
     "rank": "9.8",
     "price": "$300.000",
-    "image": "img/gran_canaria.jpg"
+    "image": "gran_canaria.jpg"
   },
   {
     "title": "Roma",
     "country": "Italia",
     "rank": "9.6",
     "price": "$280.000",
-    "image": "img/Roma.jpeg"
+    "image": "Roma.jpeg"
   },
   {
     "title": "Tenerife",
     "country": "España",
     "rank": "9.7",
     "price": "$290.000",
-    "image": "img/Tenerife.jpeg"
+    "image": "Tenerife.jpeg"
   }
 ]

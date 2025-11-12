@@ -1,7 +1,5 @@
 
-const show_contacts = document.getElementById("show-contacts");
 const contacts_container = document.getElementById("contacts-container");
-
 
 const load_contacts = async () => {
    const response = await fetch("http://localhost:8080/social/get_contacts");
@@ -20,13 +18,3 @@ const load_contacts = async () => {
       contacts_container.appendChild(contact);
    });
 }
-show_contacts.addEventListener("click", () => {
-   if (contacts_container.classList.contains("hidden")) {
-      contacts_container.classList.remove("hidden");
-      for (let i = 0; i < contacts_container.childElementCount; i++)
-         contacts_container.removeChild(contacts_container.lastChild);
-      load_contacts();
-      return;
-   }
-   contacts_container.classList.add("hidden");
-})

@@ -45,43 +45,12 @@
    </main>
    <footer-component></footer-component>
 
-   <script src="/Frontend/components/header.js"></script>
-   <script src="/Frontend/components/card.js"></script>
-   <script src="/Frontend/components/header.js"></script>
-   <script src="/Frontend/components/footer.js"></script>
-   <script src="/Frontend/components/spot_modal.js"></script>
+   <script src="/Frontend/components/Header/header.js"></script>
+   <script src="/Frontend/components/Card/card.js"></script>
+   <script src="/Frontend/components/Footer/footer.js"></script>
+   <script src="/Frontend/components/Spot_Modal/spot_modal.js"></script>
    <script src="/Frontend/scripts/music_control.js"></script>
-   <script src="/Frontend/scripts/header.js"></script>
    <script src="app.js"></script>
 </body>
 
 </html>
-<script>
-   async function load_cards_data() {
-      try {
-         console.log("cargando datos");
-
-         // const response = await fetch("./cards.json");
-         // const data = await response.json();
-
-         const response = await fetch("http://localhost:8080/dest/get_all");
-         const data = await response.json();
-         const cards_container = document.querySelector(".cards-container");
-         for (let i = 0; i < data.cards.length; i++) {
-            const card_data = data.cards[i];
-            const card = document.createElement("card-item");
-            card.setAttribute("title", card_data.title)
-            card.setAttribute("country", card_data.country)
-            card.setAttribute("rank", card_data.rank)
-            card.setAttribute("price", card_data.price)
-            card.setAttribute("image", card_data.image)
-            cards_container.appendChild(card)
-         }
-         console.log("cards cargadas")
-      } catch (error) {
-         console.log(error);
-      }
-   }
-
-   document.addEventListener("DOMContentLoaded", load_cards_data)
-</script>
