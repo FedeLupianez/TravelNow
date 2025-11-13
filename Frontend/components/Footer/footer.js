@@ -25,6 +25,7 @@ class Footer extends HTMLElement {
                   </span>
                   <span class="description">travelnow@gmail.com</span>
                </div>
+               <p>© 2025 TravelNow - Todos los derechos reservados</p>
             </div>
             <div id="footer-logo"
                style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
