@@ -2,7 +2,7 @@ BACKEND_DIR=./Backend
 FRONTEND_DIR=./Frontend
 APP_MODULE=main:app
 HOST=http://localhost:8000
-OS=$(shell uname -a)
+OS=$(shell uname)
 
 # Configuración de paths según el OS
 EXE_DIR=.venv/Scripts
