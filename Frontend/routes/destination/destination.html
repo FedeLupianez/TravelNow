@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <link rel="icon" type="image/x-icon" href="/Frontend/img/logo.png" />
+   <title>TravelNow</title>
+</head>
+
+<body>
+   <main>
+      <img src="" id="landing-image" />
+   </main>
+
+</body>
+
+</html>
+
+<script>
+   const url = new URLSearchParams(window.location.search);
+   const img = url.get('img');
+   const image = document.getElementById("landing-image");
+   image.src = `/Frontend/img/${img}`;
+</script>

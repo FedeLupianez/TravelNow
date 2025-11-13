@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from dependencies import DB
+from app.dependencies import DB
 
 
 class contact_data(BaseModel):
@@ -22,3 +22,4 @@ def save_contact(contact: contact_data):
 
 def get_contacts():
     return DB.get_all_data("contacts")
+

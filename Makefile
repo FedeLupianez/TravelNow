@@ -1,6 +1,6 @@
 BACKEND_DIR=./Backend
 FRONTEND_DIR=./Frontend
-APP_MODULE=main:app
+APP_MODULE=app.main:main_app
 HOST=http://localhost:8000
 OS=$(shell uname)
 

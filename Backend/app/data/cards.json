@@ -1,4 +1,5 @@
-[
+{
+   "0":
   {
     "title": "Amsterdam",
     "country": "Países Bajos",
@@ -6,6 +7,7 @@
     "price": "$1.000.000",
     "image": "amsterdam.webp"
   },
+   "1":
   {
     "title": "Budapest",
     "country": "Hungría",
@@ -13,6 +15,7 @@
     "price": "$220.000",
     "image": "Budapest.jpg"
   },
+   "2":
   {
     "title": "Gran Canaria",
     "country": "España",
@@ -20,6 +23,7 @@
     "price": "$300.000",
     "image": "gran_canaria.jpg"
   },
+   "3":
   {
     "title": "Roma",
     "country": "Italia",
@@ -27,11 +31,12 @@
     "price": "$280.000",
     "image": "Roma.jpeg"
   },
-  {
-    "title": "Tenerife",
-    "country": "España",
-    "rank": "9.7",
-    "price": "$290.000",
-    "image": "Tenerife.jpeg"
-  }
-]
+   "4":
+   {
+   "title": "Tenerife",
+   "country": "España",
+   "rank": "9.7",
+   "price": "$290.000",
+   "image": "Tenerife.jpeg"
+   }
+}

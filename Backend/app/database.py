@@ -13,13 +13,16 @@ class Database:
 
     def __init__(self) -> None:
         # Cada archivo.json es una tabla
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self.data_dir = os.path.join(base_dir, "data")
         self.tables = [
-            name.lower().removesuffix(".json") for name in os.listdir("./Data")
+            name.lower().removesuffix(".json") for name in os.listdir(self.data_dir)
         ]
         print(self.tables)
         self.data = {}
         for table in self.tables:
-            with open(f"./Data/{table}.json", "r", encoding="utf-8") as file:
+            file_path = os.path.join(self.data_dir, f"{table}.json")
+            with open(file_path, "r", encoding="utf-8") as file:
                 self.data[table] = json.load(file)
 
     def get_all_data(self, table: str) -> dict:
@@ -56,8 +59,10 @@ class Database:
     def commit(self, table: str | None = None) -> None:
         if not table:
             for table in self.tables:
-                with open(f"./Data/{table}.json", "w", encoding="utf-8") as file:
+                file_path = os.path.join(self.data_dir, f"{table}.json")
+                with open(file_path, "w", encoding="utf-8") as file:
                     json.dump(self.data[table], file, indent=3)
         else:
-            with open(f"./Data/{table}.json", "w", encoding="utf-8") as file:
+            file_path = os.path.join(self.data_dir, f"{table}.json")
+            with open(file_path, "w", encoding="utf-8") as file:
                 json.dump(self.data[table], file, indent=3)

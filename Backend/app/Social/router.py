@@ -1,7 +1,8 @@
 from fastapi import APIRouter
-import Social.services as services
+import app.Social.services as services
 import yagmail
-from dependencies import YAGMAIL_PWD, SEND_EMAIL
+from app.dependencies import YAGMAIL_PWD, SEND_EMAIL
+import logging
 
 
 router = APIRouter(prefix="/social")
@@ -20,7 +21,8 @@ async def contact_us(message: services.contact_data):
                 message.email,
             ],
         )
-    status = services.save_contact(message)
+    services.save_contact(message)
+    logging.info(f"message sent : {message.email} {message.subject} {message.message}")
     return {"detail": "message sent"}
 
 
