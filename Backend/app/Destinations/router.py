@@ -21,3 +21,11 @@ async def get_one(id: str):
         return data
     except Exception:
         raise HTTPException(status_code=300, detail="Error with get_one")
+
+
+@router.post("/reserve")
+async def reserve(data: services.ReserveData):
+    try:
+        return services.reserve(data)
+    except Exception:
+        raise HTTPException(status_code=300, detail="Error with reserve")
