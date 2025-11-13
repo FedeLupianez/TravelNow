@@ -1,10 +1,16 @@
 BACKEND_DIR=./Backend
 FRONTEND_DIR=./Frontend
-VENV_DIR=.venv
-UVICORN=./$(VENV_DIR)/bin/uvicorn
 APP_MODULE=main:app
 HOST=http://localhost:8000
-OS=$(shell uname)
+OS=$(shell uname -a)
+
+# Configuración de paths según el OS
+EXE_DIR=.venv/Scripts
+ifeq ($(OS),Linux)
+	EXE_DIR = .venv/bin
+endif
+
+UVICORN=./$(EXE_DIR)/uvicorn
 
 # Deploy backend
 back:
@@ -13,18 +19,16 @@ back:
 
 front:
 	@echo "deploying frontend"
+	@echo "view page in $(HOST)/Frontend"
+	@python ./server.py
 	@cd $(FRONTEND_DIR)
 	@if [ "$(OS)" = "Linux" ]; then \
-		@echo "starting browser in linux"; \
+		echo "starting browser in linux"; \
 		brave "$(HOST)/Frontend"; \
-	elif [ "$(OS)" = "Windows" ]; then \
-		@echo "starting browser in windows"; \
-		start "$(HOST)/Frontend"; \
-	elif [ "$(OS)" = "Darwin" ]; then \
-		@echo "starting browser in macos"; \
-		open "$(HOST)/Frontend"; \
+	else \
+		echo "starting browser in windows"; \
+		cmd /c start "" "$(HOST)/Frontend"; \
 	fi
-	@python3 ./server.py
 
 
 # Deploy both frontend and backend
@@ -35,10 +39,19 @@ all:
 
 # Initialize virtual environment
 init:
-	@echo "creating virtual environment"
-	@cd $(BACKEND_DIR)
-	@python3 -m venv $(VENV_DIR)
-	@echo "installing requirements"
-	@$(VENV_DIR)/bin/pip install -r requirements.txt
-	@echo "requirements installed"
-	@echo "run 'make all' to start"
+	@if [ ! -d .venv ]; then \
+		echo "Creating virtual environment..."; \
+		cd $(BACKEND_DIR); \
+		python -m venv .venv; \
+	else \
+		echo "Virtual environment already exists."; \
+	fi
+	@echo "Installing requirements..."
+	@if [ "$(OS)" = "Linux" ]; then \
+		$(BACKEND_DIR)/$(EXE_DIR)/bin/pip install -r $(BACKEND_DIR)/requirements.txt; \
+	else \
+		$(BACKEND_DIR)/$(EXE_DIR)/Scripts/pip install -r $(BACKEND_DIR)/requirements.txt; \
+	fi
+	@echo "Requirements installed"
+	@echo "Run 'make all' to start"
+

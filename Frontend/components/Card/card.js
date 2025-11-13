@@ -12,7 +12,7 @@ class Card extends HTMLElement {
       console.log("creating card ...")
       this.innerHTML = `
       <a href="/Frontend/routes/contact/contact.html">
-         <div class="card" style="background-image: url(${this.image}); image-rendering: Optimizespeed;">
+         <div class="card" style="background-image: url(/Frontend/img/${this.image}); image-rendering: Optimizespeed;">
             <like-button></like-button>
             <div class="title-card-container">
                <span class="card-title">${this.title}</span>
