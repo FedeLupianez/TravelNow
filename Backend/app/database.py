@@ -1,6 +1,12 @@
 # En este archivo voy a simular una base de datos con una clase
 import os
 import json
+from secrets import token_hex
+
+
+def new_id():
+    """genera un token hex random para usar como id único"""
+    return token_hex(16)
 
 
 class Database:
@@ -18,7 +24,6 @@ class Database:
         self.tables = [
             name.lower().removesuffix(".json") for name in os.listdir(self.data_dir)
         ]
-        print(self.tables)
         self.data = {}
         for table in self.tables:
             file_path = os.path.join(self.data_dir, f"{table}.json")
@@ -38,23 +43,41 @@ class Database:
             raise Exception(f"El id {id} no existe en la tabla {table}")
         return self.data[table][str_id]
 
-    def get_new_id(self, table: str) -> int:
-        new_id = len(self.data[table])
-        if new_id in self.data[table]:
+    def get_by_column(self, table: str, col: str, value) -> dict:
+        if table not in self.tables:
+            raise Exception(f"La tabla {table} no existe")
+        if type(value) is str:
+            value = value.lower()
+
+        for id in self.data[table]:
+            if col not in self.data[table][id]:
+                raise Exception(f"La columna {col} no existe en la tabla {table}")
+            data = self.data[table][id][col]
+
+            if type(data) is str:
+                data = data.lower()
+
+            if data == value:
+                return self.data[table][id]
+        return {}
+
+    def get_new_index(self, table: str) -> int:
+        new_idx = len(self.data[table])
+        if new_idx in self.data[table]:
             actual_keys = self.data[table].keys()
             actual_keys = list(map(int, actual_keys))
             numbers = range(max(actual_keys) + 1)
-            print(actual_keys, numbers)
-            new_id = set(actual_keys).difference(numbers).pop()
-        return new_id
+            new_idx = set(actual_keys).difference(numbers).pop()
+        return new_idx
 
     def add_data(self, table: str, data: dict) -> None:
         if table not in self.tables:
             raise Exception(f"La tabla {table} no existe")
-        id = str(self.get_new_id(table))
-        self.data[table][id] = data
+        idx = str(self.get_new_index(table))
+        self.data[table][idx] = data
+        self.data[table][idx]["id"] = new_id()
         print(self.data[table])
-        print(self.data[table][id])
+        print(self.data[table][idx])
 
     def commit(self, table: str | None = None) -> None:
         if not table:

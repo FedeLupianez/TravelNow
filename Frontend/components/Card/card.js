@@ -8,10 +8,10 @@ class Card extends HTMLElement {
       this.country = this.getAttribute("country") || "";
       this.price = this.getAttribute("price") || "";
       this.image = this.getAttribute("image") || "";
+      this.dest_id = this.getAttribute("dest_id") || "";
 
-      console.log("creating card ...")
       this.innerHTML = `
-      <a href="/Frontend/routes/contact/contact.html">
+      <a href="/Frontend/routes/destination/destination.html?id=${this.dest_id}">
          <div class="card" style="background-image: url(/Frontend/img/${this.image}); image-rendering: Optimizespeed;">
             <like-button></like-button>
             <div class="title-card-container">
