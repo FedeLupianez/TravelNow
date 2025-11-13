@@ -36,6 +36,7 @@ async function load_cards_data() {
       let data = await response.json();
       const cards_container = document.querySelector(".cards-container");
       data = data.cards;
+      console.log(data);
       for (let i = 0; i < data.length; i++) {
          const card = document.createElement("card-item");
          card.setAttribute("title", data[i].title)
@@ -43,6 +44,7 @@ async function load_cards_data() {
          card.setAttribute("rank", data[i].rank)
          card.setAttribute("price", data[i].price)
          card.setAttribute("image", data[i].image)
+         card.setAttribute("dest_id", data[i].id)
          cards_container.appendChild(card)
       }
       console.log("cards cargadas")

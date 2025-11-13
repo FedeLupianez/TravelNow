@@ -4,12 +4,12 @@
 @import url("/Frontend/components/Like_Button/like_button.css");
 @import url("/Frontend/routes/contact/components/contact_item/contact_item.css");
 @import url("./styles/view_contacts.css");
+@import url("/Frontend/global.css");
 
 
 html,
 body {
    background-color: white;
-   font-family: 'Lexend Exa', monospace;
    padding: 0;
    box-sizing: border-box;
    margin: 0;
