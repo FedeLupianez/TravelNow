@@ -2,7 +2,10 @@
 ## Lupiañez Federico 6to "A" ISMDF
 
 ### Despliegue de la app
-Hay varias formas de desplegar este repositorio, una de ellas es con Make, para esto hice un archivo Makefile en el cual están los siguientes comandos:
+Hay varias formas de desplegar este repositorio, las cuales voy a detallas a continuación :
+
+#### Make:
+Una de las formas es con Make, para esto hice un archivo Makefile en el cual están los siguientes comandos:
 
 ```bash
 make init
@@ -17,12 +20,38 @@ make all
 - `make back` -> Despliega solo el Backend en localhost:8080
 - `make all` -> Despliega el Frontend y el Backend en localhost:8000 y localhost:8080 respectivamente
 
+### bat script :
 Como segunda manera de desplegar la app, se puede ejecutar el archivo `deploy.bat` en la raíz del proyecto. De esta manera se va a desplegar automáticamente con solo un comando.
 [!IMPORTANT]
 > **Se debe ejecutar este archivo una vez que el entorno virtual y las dependencias del backend están instaladas**
 ```bash
 ./deploy.bat
 ```
+
+#### Forma manual:
+Para desplegar la app manualmente vamos a inicializar el entorno del Backend, para ello nos vamos dirigir a una nueva terminal y ejecutar los siguientes comandos para instalar las dependencias necesarias :
+
+```bash
+cd Backend
+python -m venv .venv
+.venv/Scripts/activate
+python -m pip install -r requirements.txt
+```
+
+De esta forma, se habrá creado un entorno virtual en la carpeta Backend con las dependencias que utiliza la api.
+
+Para desplegarlo, basta con ejecutar el siguiente comando que desplegará la API con uvicorn en el puerto 8080:
+```bash
+uvicorn app.main:main_app --host 0.0.0.0 --port 8080
+```
+De esta manera se desplegará el Backend en http://localhost:8080.
+
+
+Ahora bien, para desplegar el Frontend nos debemos de dirigir a la carpeta raíz del proyecto y ejecutar el archivo `server.py`, que actuará como servidor HTTP local:
+```bash
+python server.py
+```
+Y el Frontend se desplegará en http://localhost:8000.
 
 
 

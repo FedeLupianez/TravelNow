@@ -1,4 +1,4 @@
-fastapi
-uvicorn
-yagmail
-dotenv
+fastapi==0.120.4
+uvicorn==0.38.0
+yagmail==0.15.293
+dotenv==0.9.9
