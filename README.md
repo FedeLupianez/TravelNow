@@ -21,12 +21,13 @@ make all
 - `make all` -> Despliega el Frontend y el Backend en localhost:8000 y localhost:8080 respectivamente
 
 ### bat script :
-Como segunda manera de desplegar la app, se puede ejecutar el archivo `deploy.bat` en la raíz del proyecto. De esta manera se va a desplegar automáticamente con solo un comando.
-[!IMPORTANT]
-> **Se debe ejecutar este archivo una vez que el entorno virtual y las dependencias del backend están instaladas**
+Como segunda manera de desplegar la app, se puede ejecutar el archivo `deploy.bat` en la carpeta `scripts` de la raíz proyecto. De esta manera se va a desplegar automáticamente con solo un comando.
+
 ```bash
+cd scripts
 ./deploy.bat
 ```
+Este archivo va a abrir dos cmd nuevas, una para desplegar el Backend y otra para el Frontend. Una vez ejecutado solo debe abrir una nueva ventana en el navegador y abrir la ruta `http://localhost:8000/Frontend` para ver la página.
 
 #### Forma manual:
 Para desplegar la app manualmente vamos a inicializar el entorno del Backend, para ello nos vamos dirigir a una nueva terminal y ejecutar los siguientes comandos para instalar las dependencias necesarias :
@@ -47,7 +48,7 @@ uvicorn app.main:main_app --host 0.0.0.0 --port 8080
 De esta manera se desplegará el Backend en http://localhost:8080.
 
 
-Ahora bien, para desplegar el Frontend nos debemos de dirigir a la carpeta raíz del proyecto y ejecutar el archivo `server.py`, que actuará como servidor HTTP local:
+Ahora bien, para desplegar el Frontend, en una nueva terminal nos debemos de dirigir a la carpeta raíz del proyecto y ejecutar el archivo `server.py`, que actuará como servidor HTTP local:
 ```bash
 python server.py
 ```

@@ -14,4 +14,5 @@ class UTF8Handler(SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     server = HTTPServer(("localhost", 8000), UTF8Handler)
     print("Servidor corriendo en http://localhost:8000")
+    print("Visite la página en http://localhost:8000/Frontend")
     server.serve_forever()
