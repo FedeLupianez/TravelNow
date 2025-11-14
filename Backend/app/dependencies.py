@@ -2,6 +2,8 @@ from dotenv import dotenv_values
 import os
 from app.database import Database
 import logging
+from dataclasses import dataclass
+
 
 logging.basicConfig(
     level=logging.INFO, filename="app.log", format="%(asctime)s %(message)s"
@@ -22,3 +24,11 @@ def get_path(file_name: str) -> str:
 
 DB = Database()
 logging.info("Database initialized")
+
+
+@dataclass
+class Codes:
+    OK: str = "OK"
+    BAD_REQUEST: str = "BAD_REQUEST"
+    NOT_FOUND: str = "NOT_FOUND"
+    SERVER_ERROR: str = "SERVER_ERROR"
