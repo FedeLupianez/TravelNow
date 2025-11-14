@@ -12,23 +12,14 @@ endif
 
 UVICORN=./$(EXE_DIR)/uvicorn
 
-# Deploy backend
 back:
-	@echo "deploying backend"
+	@echo "Deploying Backend"
 	@cd $(BACKEND_DIR) && $(UVICORN) $(APP_MODULE) --host 0.0.0.0 --port 8080 --reload
 
 front:
-	@echo "deploying frontend"
+	@echo "Deploying Frontend"
 	@echo "view page in $(HOST)/Frontend"
 	@python ./server.py
-	@cd $(FRONTEND_DIR)
-	@if [ "$(OS)" = "Linux" ]; then \
-		echo "starting browser in linux"; \
-		brave "$(HOST)/Frontend"; \
-	else \
-		echo "starting browser in windows"; \
-		cmd /c start "" "$(HOST)/Frontend"; \
-	fi
 
 
 # Deploy both frontend and backend
@@ -47,11 +38,7 @@ init:
 		echo "Virtual environment already exists."; \
 	fi
 	@echo "Installing requirements..."
-	@if [ "$(OS)" = "Linux" ]; then \
-		$(BACKEND_DIR)/$(EXE_DIR)/bin/pip install -r $(BACKEND_DIR)/requirements.txt; \
-	else \
-		$(BACKEND_DIR)/$(EXE_DIR)/Scripts/pip install -r $(BACKEND_DIR)/requirements.txt; \
-	fi
+	$(BACKEND_DIR)/$(EXE_DIR)/pip install -r $(BACKEND_DIR)/requirements.txt;
 	@echo "Requirements installed"
 	@echo "Run 'make all' to start"
 
