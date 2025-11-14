@@ -1,47 +1,101 @@
 {
-   "0":
-  {
-      "id": "f9bf78b9a18ce6d46a0cd2b0b86df9da",
+  "0": {
+    "id": "f9bf78b9a18ce6d46a0cd2b0b86df9da",
     "title": "Amsterdam",
     "country": "Países Bajos",
     "rank": "9.5",
     "price": "$1.000.000",
-    "image": "amsterdam.webp"
+    "image": "Amsterdam.jpg",
+    "description": "Amsterdam es una ciudad ubicada en los Países Bajos, ideal para recorrer en bicicleta, explorar sus canales y disfrutar de su vibrante vida cultural."
   },
-   "1":
-  {
-      "id": "b9bf78b9a18ce6d46a0cd2b0b86df9da",
+  "1": {
+    "id": "b9bf78b9a18ce6d46a0cd2b0b86df9da",
     "title": "Budapest",
     "country": "Hungría",
     "rank": "9.3",
     "price": "$220.000",
-    "image": "Budapest.jpg"
+    "image": "Budapest.jpg",
+    "description": "Budapest ofrece un viaje lleno de historia, termas relajantes y vistas impresionantes del Danubio que divide la ciudad en Buda y Pest."
   },
-   "2":
-  {
-   "id": "c9bf78b9a18ce6d46a0cd2b0b86df9da",
+  "2": {
+    "id": "c9bf78b9a18ce6d46a0cd2b0b86df9da",
     "title": "Gran Canaria",
     "country": "España",
     "rank": "9.8",
     "price": "$300.000",
-    "image": "gran_canaria.jpg"
+    "image": "gran_canaria.jpg",
+    "description": "Gran Canaria es un destino perfecto para disfrutar de playas doradas, paisajes volcánicos y encantadores pueblos costeros."
   },
-   "3":
-  {
-      "id": "e9bf78b9a18ce6d46a0cd2b0b86df9da",
+  "3": {
+    "id": "e9bf78b9a18ce6d46a0cd2b0b86df9da",
     "title": "Roma",
     "country": "Italia",
     "rank": "9.6",
     "price": "$280.000",
-    "image": "Roma.jpeg"
+    "image": "Roma.jpg",
+    "description": "Roma te invita a viajar en el tiempo entre monumentos icónicos como el Coliseo, el Vaticano y sus encantadoras plazas históricas."
   },
-   "4":
-   {
-      "id": "d9bf78b9a18ce6d46a0cd2b0b86df9da",
-   "title": "Tenerife",
-   "country": "España",
-   "rank": "9.7",
-   "price": "$290.000",
-   "image": "Tenerife.jpeg"
-   }
+  "4": {
+    "id": "d9bf78b9a18ce6d46a0cd2b0b86df9da",
+    "title": "Tenerife",
+    "country": "España",
+    "rank": "9.7",
+    "price": "$290.000",
+    "image": "Tenerife.jpg",
+    "description": "Tenerife combina playas hermosas, el majestuoso Teide y pueblos pintorescos, convirtiéndola en una isla ideal para un viaje inolvidable."
+  },
+  "5": {
+    "id": "f1bf78b9a18ce6d46a0cd2b0b86df9da",
+    "title": "París",
+    "country": "Francia",
+    "rank": "9.7",
+    "price": "$450.000",
+    "image": "Paris.jpg",
+    "description": "París, la ciudad del amor, te cautivará con su arquitectura impresionante, la Torre Eiffel, los museos de renombre mundial y su romántico ambiente."
+  },
+  "6": {
+    "id": "g2bf78b9a18ce6d46a0cd2b0b86df9da",
+    "title": "Kioto",
+    "country": "Japón",
+    "rank": "9.4",
+    "price": "$700.000",
+    "image": "Kioto.jpg",
+    "description": "Kioto, la antigua capital imperial de Japón, es famosa por sus templos budistas, jardines zen y su arquitectura tradicional que te transporta al pasado."
+  },
+  "7": {
+    "id": "h3bf78b9a18ce6d46a0cd2b0b86df9da",
+    "title": "Dubai",
+    "country": "Emiratos Árabes Unidos",
+    "rank": "9.1",
+    "price": "$1.200.000",
+    "image": "Dubai.jpg",
+    "description": "Dubai, la ciudad del lujo y la modernidad, ofrece imponentes rascacielos, centros comerciales de clase mundial y una vibrante vida nocturna en el desierto."
+  },
+  "8": {
+    "id": "i4bf78b9a18ce6d46a0cd2b0b86df9da",
+    "title": "Santorini",
+    "country": "Grecia",
+    "rank": "9.8",
+    "price": "$350.000",
+    "image": "Santorini.jpg",
+    "description": "Santorini es conocida por sus impresionantes vistas al mar Egeo, sus casas blancas y azules, y sus puestas de sol mágicas, convirtiéndola en un destino idílico."
+  },
+  "9": {
+    "id": "j5bf78b9a18ce6d46a0cd2b0b86df9da",
+    "title": "Nueva York",
+    "country": "Estados Unidos",
+    "rank": "9.6",
+    "price": "$600.000",
+    "image": "New_york.jpg",
+    "description": "Nueva York, la ciudad que nunca duerme, te ofrece una mezcla única de cultura, arte, gastronomía y una vida urbana vibrante, con vistas espectaculares."
+  },
+  "10": {
+    "id": "k6bf78b9a18ce6d46a0cd2b0b86df9da",
+    "title": "Bali",
+    "country": "Indonesia",
+    "rank": "9.9",
+    "price": "$850.000",
+    "image": "Bali.jpg",
+    "description": "Bali, una isla tropical en Indonesia, es famosa por sus playas paradisíacas, templos antiguos y su ambiente relajado que atrae tanto a turistas como a surfistas."
+  }
 }

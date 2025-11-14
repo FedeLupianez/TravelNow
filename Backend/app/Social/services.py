@@ -5,10 +5,12 @@ from app.exceptions import NotFoundException, InternalServerError
 
 class contact_data(BaseModel):
     name: str = ""
-    last_name: str = ""
+    lastname: str = ""
     email: str = ""
     subject: str = ""
     message: str = ""
+    number: str = ""
+    destination: str = ""
 
 
 def save_contact(contact: contact_data):

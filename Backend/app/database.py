@@ -27,7 +27,7 @@ class Database:
         self.data = {}
         for table in self.tables:
             file_path = os.path.join(self.data_dir, f"{table}.json")
-            with open(file_path, "r", encoding="utf-8") as file:
+            with open(file_path, "r", encoding="utf-8-sig") as file:
                 self.data[table] = json.load(file)
 
     def get_all_data(self, table: str) -> dict:
@@ -76,16 +76,15 @@ class Database:
         idx = str(self.get_new_index(table))
         self.data[table][idx] = data
         self.data[table][idx]["id"] = new_id()
-        print(self.data[table])
         print(self.data[table][idx])
 
     def commit(self, table: str | None = None) -> None:
         if not table:
             for table in self.tables:
                 file_path = os.path.join(self.data_dir, f"{table}.json")
-                with open(file_path, "w", encoding="utf-8") as file:
+                with open(file_path, "w", encoding="utf-8-sig") as file:
                     json.dump(self.data[table], file, indent=3)
         else:
             file_path = os.path.join(self.data_dir, f"{table}.json")
-            with open(file_path, "w", encoding="utf-8") as file:
+            with open(file_path, "w", encoding="utf-8-sig") as file:
                 json.dump(self.data[table], file, indent=3)
