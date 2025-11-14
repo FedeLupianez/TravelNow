@@ -35,7 +35,7 @@ const load_data = async (id) => {
    title.innerHTML = data.title;
    description.innerHTML = data.description;
    price.innerHTML = data.price;
-   landing_container.style.backgroundImage = `url(/Frontend/img/${data.image})`;
+   landing_container.style.backgroundImage = `url(${data.image})`;
    title.innerHTML = data.title;
    country.innerHTML = data.country;
 
