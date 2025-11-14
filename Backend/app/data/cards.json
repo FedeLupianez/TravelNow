@@ -5,7 +5,7 @@
     "country": "Países Bajos",
     "rank": "9.5",
     "price": "$1.000.000",
-    "image": "Amsterdam.jpg",
+    "image": "https://images.pexels.com/photos/2031706/pexels-photo-2031706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Amsterdam es una ciudad ubicada en los Países Bajos, ideal para recorrer en bicicleta, explorar sus canales y disfrutar de su vibrante vida cultural."
   },
   "1": {
@@ -14,7 +14,7 @@
     "country": "Hungría",
     "rank": "9.3",
     "price": "$220.000",
-    "image": "Budapest.jpg",
+    "image": "https://images.pexels.com/photos/732057/pexels-photo-732057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Budapest ofrece un viaje lleno de historia, termas relajantes y vistas impresionantes del Danubio que divide la ciudad en Buda y Pest."
   },
   "2": {
@@ -23,7 +23,7 @@
     "country": "España",
     "rank": "9.8",
     "price": "$300.000",
-    "image": "gran_canaria.jpg",
+    "image": "https://images.pexels.com/photos/3903948/pexels-photo-3903948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Gran Canaria es un destino perfecto para disfrutar de playas doradas, paisajes volcánicos y encantadores pueblos costeros."
   },
   "3": {
@@ -32,7 +32,7 @@
     "country": "Italia",
     "rank": "9.6",
     "price": "$280.000",
-    "image": "Roma.jpg",
+    "image": "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Roma te invita a viajar en el tiempo entre monumentos icónicos como el Coliseo, el Vaticano y sus encantadoras plazas históricas."
   },
   "4": {
@@ -41,7 +41,7 @@
     "country": "España",
     "rank": "9.7",
     "price": "$290.000",
-    "image": "Tenerife.jpg",
+    "image": "https://images.pexels.com/photos/1606630/pexels-photo-1606630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Tenerife combina playas hermosas, el majestuoso Teide y pueblos pintorescos, convirtiéndola en una isla ideal para un viaje inolvidable."
   },
   "5": {
@@ -50,7 +50,7 @@
     "country": "Francia",
     "rank": "9.7",
     "price": "$450.000",
-    "image": "Paris.jpg",
+    "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "París, la ciudad del amor, te cautivará con su arquitectura impresionante, la Torre Eiffel, los museos de renombre mundial y su romántico ambiente."
   },
   "6": {
@@ -59,7 +59,7 @@
     "country": "Japón",
     "rank": "9.4",
     "price": "$700.000",
-    "image": "Kioto.jpg",
+    "image": "https://images.pexels.com/photos/2342479/pexels-photo-2342479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Kioto, la antigua capital imperial de Japón, es famosa por sus templos budistas, jardines zen y su arquitectura tradicional que te transporta al pasado."
   },
   "7": {
@@ -68,7 +68,7 @@
     "country": "Emiratos Árabes Unidos",
     "rank": "9.1",
     "price": "$1.200.000",
-    "image": "Dubai.jpg",
+    "image": "https://images.pexels.com/photos/5686514/pexels-photo-5686514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Dubai, la ciudad del lujo y la modernidad, ofrece imponentes rascacielos, centros comerciales de clase mundial y una vibrante vida nocturna en el desierto."
   },
   "8": {
@@ -77,7 +77,7 @@
     "country": "Grecia",
     "rank": "9.8",
     "price": "$350.000",
-    "image": "Santorini.jpg",
+    "image": "https://images.pexels.com/photos/221532/pexels-photo-221532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Santorini es conocida por sus impresionantes vistas al mar Egeo, sus casas blancas y azules, y sus puestas de sol mágicas, convirtiéndola en un destino idílico."
   },
   "9": {
@@ -86,7 +86,7 @@
     "country": "Estados Unidos",
     "rank": "9.6",
     "price": "$600.000",
-    "image": "New_york.jpg",
+    "image": "https://images.pexels.com/photos/771881/pexels-photo-771881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Nueva York, la ciudad que nunca duerme, te ofrece una mezcla única de cultura, arte, gastronomía y una vida urbana vibrante, con vistas espectaculares."
   },
   "10": {
@@ -95,7 +95,7 @@
     "country": "Indonesia",
     "rank": "9.9",
     "price": "$850.000",
-    "image": "Bali.jpg",
+    "image": "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Bali, una isla tropical en Indonesia, es famosa por sus playas paradisíacas, templos antiguos y su ambiente relajado que atrae tanto a turistas como a surfistas."
   }
 }

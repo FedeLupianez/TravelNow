@@ -74,6 +74,7 @@ Con esto el Frontend se desplegará en http://localhost:8000 y podrá visitar la
       - dependencies.py -> Archivo con dependencias de la API, como la config.
       - `Destinations` -> Carpeta con el el router de los destinos.
       - `Social` -> Carpeta con el el router de cosas relacionadas a contactos y servicios de la empresa.
+      - data -> carpeta que contiene los archivos json con los destinos mockeados.
 
 
 - `Frontend` -> Contiene los archivos del frontend
