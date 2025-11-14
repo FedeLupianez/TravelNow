@@ -6,7 +6,6 @@ body {
    padding: 0;
    margin: 0;
    gap: 0;
-   image-rendering: optimizeQuality;
 }
 
 * {
@@ -31,6 +30,10 @@ a {
 
 .hidden {
    display: none;
+}
+
+button {
+   transition: background-color 0.5s ease;
 }
 
 @keyframes entry_top {

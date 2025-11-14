@@ -64,7 +64,7 @@ main {
    padding-top: 2rem;
    padding-bottom: 2rem;
    animation: entry-down 0.7s ease-in-out forwards;
-   gap: 4rem;
+   gap: 1rem;
 }
 
 #top-destination {
@@ -75,12 +75,13 @@ main {
    justify-content: start;
    animation: entry-down 0.7s ease-in-out forwards;
    gap: 1rem;
+   margin-bottom: 3rem;
 }
 
 #rank {
    font-size: 2rem;
-   width: 5rem;
-   height: 5rem;
+   min-width: 5rem;
+   min-height: 5rem;
    border-radius: 14px;
    display: flex;
    align-items: center;

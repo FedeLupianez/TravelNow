@@ -15,6 +15,7 @@ const load_contacts = async () => {
       contact.setAttribute("number", element.number);
       contact.setAttribute("subject", element.subject);
       contact.setAttribute("message", element.message);
+      contact.setAttribute("destination", element.destination);
       contacts_container.appendChild(contact);
    });
 }

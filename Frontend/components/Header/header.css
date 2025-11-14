@@ -56,6 +56,7 @@ nav {
    font-size: 0.7rem;
    font-weight: bold;
    border: 1px solid transparent;
+   transition: all 0.3s ease;
 }
 
 #nav-center .link_span:hover {

@@ -49,7 +49,7 @@ window.onload = () => {
 
 const form = document.getElementById("form");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
    e.preventDefault()
    const data = {
       name: document.getElementById("form_name").value,
@@ -58,12 +58,23 @@ form.addEventListener("submit", (e) => {
       number: document.getElementById("form_number").value,
       dest_id: dest_id
    }
+   const button = document.getElementById("reserve-button");
 
-   fetch("http://localhost:8080/dest/reserve", {
+
+   const response = await fetch("http://localhost:8080/dest/reserve", {
       method: 'POST',
       headers: {
          'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
    })
+
+   if (response.ok) {
+      button.innerHTML = "Reservado";
+      button.style.backgroundColor = "lightgreen";
+   } else {
+      button.innerHTML = "Error";
+      button.style.backgroundColor = "red";
+   }
+
 })

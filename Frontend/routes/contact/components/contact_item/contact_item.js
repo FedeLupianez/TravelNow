@@ -17,7 +17,7 @@ class contact_register extends HTMLElement {
            <div class="contact-left-info">
               <h2>${this.name} ${(this.lastname == "undefined") ? '' : this.lastname}</h2>
               <p><strong>Email:</strong> ${this.email}</p>
-              <p><strong>Destino:</strong> ${this.destination}</p>
+              ${(this.destination == "undefined") ? '' : `<p><strong>Destino:</strong> ${this.destination}</p>`}
               <p><strong>Teléfono:</strong> ${this.number}</p>
               <p><strong>Asunto:</strong> ${this.subject}</p>
            </div>

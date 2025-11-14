@@ -21,6 +21,10 @@
    justify-content: center;
 }
 
+#show-contacts:hover {
+   background-color: navajowhite;
+}
+
 #contacts-container {
    position: absolute;
    top: 4rem;
