@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from app.dependencies import DB
+from app.exceptions import NotFoundException, InternalServerError
 
 
 class contact_data(BaseModel):
@@ -16,10 +17,11 @@ def save_contact(contact: contact_data):
         DB.commit("contacts")
         return True
     except Exception as error:
-        print("error al guardar el contacto : ", error)
-        return False
+        raise InternalServerError(detail=str(error))
 
 
 def get_contacts():
-    return DB.get_all_data("contacts")
-
+    try:
+        return DB.get_all_data("contacts")
+    except Exception as error:
+        raise InternalServerError(detail=str(error))

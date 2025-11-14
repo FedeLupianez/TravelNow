@@ -1,10 +1,29 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from app.Social.router import router as SocialRouter
 from app.Destinations.router import router as DestRouter
+from app.exceptions import NotFoundException
 import logging
 
 main_app = FastAPI(title="travelnowapi")
+
+
+@main_app.exception_handler(NotFoundException)
+async def not_found_exception_handler(request: Request, exc: NotFoundException):
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={"message": f"{exc.detail}"},
+    )
+
+
+@main_app.exception_handler(Exception)
+async def generic_exception_handler(request: Request, exc: Exception):
+    logging.error(f"An unexpected error occurred: {exc}")
+    return JSONResponse(
+        status_code=500,
+        content={"message": "An unexpected internal server error occurred."},
+    )
 
 
 main_app.add_middleware(
